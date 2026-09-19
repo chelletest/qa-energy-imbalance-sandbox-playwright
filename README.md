@@ -1,9 +1,11 @@
 # QA Test — Operational Control Sandbox
 
 A self-contained demo application built to showcase **Playwright test
-automation** against a realistic operational-data scenario for an
+automation** 
+against a realistic operational-data scenario for an
 independent energy supplier: catching a PPA generation shortfall
-before it becomes a commercial supply imbalance.
+before it becomes a commercial supply imbalance. The test suite runs
+automatically on every push via GitHub Actions.
 
 > **This is an isolated sandbox app with mock data.** It is not
 > connected to any production system, real energy grid, or real
@@ -45,6 +47,9 @@ a special case wired to one button.
 ## Architecture
 
 - **React + TypeScript**, single-page app, no backend required.
+- **Continuous integration**: The Playwright suite runs automatically
+  on every push via GitHub Actions - building the app for production
+  and testing against that build not just the local dev server.
 - **Selectable PPA assets**: click either row in the delivery tracker
   (Preston 2 Wind Farm or Lytham Solar Rays) to choose which asset the
   fault simulator targets. Defaults to Preston 2 on load.
